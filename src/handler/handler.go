@@ -68,6 +68,7 @@ func (h *Handler) Handle(ctx context.Context, msg *events.SQSEvent) error {
 	return nil
 }
 
+// writeToS3 writes the given data to S3 with the given name.
 func (h *Handler) writeToS3(ctx context.Context, name string, data io.Reader) error {
 	_, err := h.client.PutObject(ctx, &s3.PutObjectInput{
 		Bucket: &h.bucketName,

@@ -1,3 +1,2 @@
 build:
-	go build -o ../bin/funky main.go
-
+	GOARCH=amd64 GOOS=linux go build -o ../bin/funky main.go
