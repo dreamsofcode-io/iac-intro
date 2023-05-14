@@ -1,2 +1,2 @@
 build:
-	GOARCH=amd64 GOOS=linux go build -o ../bin/funky main.go
+	CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o ../bin/funky main.go
